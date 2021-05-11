@@ -19,17 +19,7 @@ def assistant_speaks(output):
     toSpeak = gTTS(text=output, lang='en-US', slow=False)
     file = str(num)+".mp3"
     toSpeak.save(file)
-    # mp3_fp = BytesIO()
-    # toSpeak = gTTS(output, 'en', slow=False)
-    # toSpeak.write_to_fp(mp3_fp)
-    # os.system("D:\PeRSon\\audio\spoken.mp3")
-    '''mixer.init()
-    mixer.music.load('D:\PeRSon\\audio\spoken.mp3')
-    mixer.music.play()
-    time.sleep(5)
-    mixer.music.stop()'''
-    # song = AudioSegment.from_file(mp3_fp, format="mp3")
-    # playsound.playsound(mp3_fp)
+   
     playsound.playsound(file, True)
     os.remove(file)
 
@@ -124,7 +114,7 @@ def process_text(input):
             assistant_speaks(speak)
             return
         elif "how are you" in input :
-            speak = "mai to mast hu tu apna dekh "
+            speak = "I am good  "
             assistant_speaks(speak)
             return
         elif "crazy" in input:
